@@ -1,0 +1,67 @@
+{
+  "before": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000002",
+      "title": "Невідома спроба входу",
+      "description": "Система зафіксувала вхід до облікового запису з нового пристрою.",
+      "severity": "High",
+      "status": "InProgress",
+      "occurredAtUtc": "2026-08-02T14:10:00+00:00",
+      "createdAtUtc": "2026-08-02T14:20:00+00:00",
+      "ownerDisplayName": "Боб Мельник",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000002",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Розпочато перевірку журналу автентифікації.",
+          "createdAtUtc": "2026-08-02T14:40:00+00:00"
+        }
+      ]
+    }
+  },
+  "update": {
+    "status": 404,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Інцидент не знайдено",
+      "status": 404,
+      "traceId": "00-131e77f33e044cd5586074fbad696db9-69f02b0463958f5f-00"
+    }
+  },
+  "delete": {
+    "status": 404,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Інцидент не знайдено",
+      "status": 404,
+      "traceId": "00-f717ca639f0f3212fc920bb891012264-e76174d98bb10de0-00"
+    }
+  },
+  "after": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000002",
+      "title": "Невідома спроба входу",
+      "description": "Система зафіксувала вхід до облікового запису з нового пристрою.",
+      "severity": "High",
+      "status": "InProgress",
+      "occurredAtUtc": "2026-08-02T14:10:00+00:00",
+      "createdAtUtc": "2026-08-02T14:20:00+00:00",
+      "ownerDisplayName": "Боб Мельник",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000002",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Розпочато перевірку журналу автентифікації.",
+          "createdAtUtc": "2026-08-02T14:40:00+00:00"
+        }
+      ]
+    }
+  },
+  "unchanged": true
+}

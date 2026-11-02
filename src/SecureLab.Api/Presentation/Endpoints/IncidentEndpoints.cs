@@ -9,7 +9,8 @@ public static class IncidentEndpoints
     public static IEndpointRouteBuilder MapIncidentEndpoints(this IEndpointRouteBuilder endpoints)
     {
         var group = endpoints.MapGroup("/api/incidents")
-            .WithTags("Incidents");
+            .WithTags("Incidents")
+            .RequireAuthorization();
 
         group.MapGet("/", GetListAsync)
             .WithName("GetIncidents")
@@ -58,10 +59,7 @@ public static class IncidentEndpoints
     {
         var incident = await queries.GetDetailsAsync(id, cancellationToken);
         return incident is null
-            ? Results.Problem(
-                title: "Інцидент не знайдено",
-                detail: $"Інцидент '{id}' не існує.",
-                statusCode: StatusCodes.Status404NotFound)
+            ? IncidentMutationEndpoints.NotFound()
             : Results.Ok(incident);
     }
 

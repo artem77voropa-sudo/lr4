@@ -1,0 +1,18 @@
+SecureLab API stopped (if running).
+ Container secure-lab-postgres-1 Running 
+ Container secure-lab-postgres-1 Waiting 
+ Container secure-lab-postgres-1 Healthy 
+Reset ONLY the synthetic LR04 database: securelab_lr04.
+Используются параметры запуска из src\SecureLab.Api\Properties\launchSettings.json...
+Сборка…
+Відновлення початкових локальних навчальних даних...
+info: Microsoft.EntityFrameworkCore.Migrations[20405]
+      No migrations were applied. The database is already up to date.
+Локальні навчальні дані очищено та повторно заповнено seed-значеннями.
+  SecureLab.Api -> C:\dev\securelab\src\SecureLab.Api\bin\Release\net10.0\SecureLab.Api.dll
+  SecureLab.Api.Tests -> C:\dev\securelab\tests\SecureLab.Api.Tests\bin\Release\net10.0\SecureLab.Api.Tests.dll
+Тестовый запуск для C:\dev\securelab\tests\SecureLab.Api.Tests\bin\Release\net10.0\SecureLab.Api.Tests.dll (.NETCoreApp,Version=v10.0)
+Общее количество тестовых файлов (1), соответствующих указанному шаблону.
+
+Пройден!   : не пройдено     0, пройдено    82, пропущено     0, всего    82, длительность 1 m 19 s. - SecureLab.Api.Tests.dll (net10.0)
+Tests complete. Start the API again with Start-Lab04.ps1.

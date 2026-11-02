@@ -14,7 +14,7 @@ async function apiFetch(path, options = {}) {
 
   if (!response.ok) {
     const problem = await response.json().catch(() => null);
-    throw new Error(problem?.title ?? `HTTP ${response.status}`);
+    throw new Error(`HTTP ${response.status}: ${problem?.title ?? "Запит не виконано"}`);
   }
 
   return response.json();
@@ -153,4 +153,8 @@ summaryButton?.addEventListener("click", () => {
 });
 
 // Первинне завантаження списку інцидентів
+document.querySelector("#details-form")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  loadIncidentDetails(new FormData(event.currentTarget).get("id").trim());
+});
 loadIncidents();

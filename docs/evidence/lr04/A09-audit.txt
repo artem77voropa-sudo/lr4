@@ -1,0 +1,4 @@
+Response traceId: 00-febd0820841a25fd8c0a4063166dc9ed-b4e4a02024a037c0-00
+Audit:
+authorization.denied subject=10000000-0000-0000-0000-000000000001 action=incident.triage resource=4a0f0928-52de-45cc-838b-2770d6d1dc67 result=denied utc=11/02/2026 16:15:21 +00:00 trace=00-febd0820841a25fd8c0a4063166dc9ed-b4e4a02024a037c0-00
+Match: True

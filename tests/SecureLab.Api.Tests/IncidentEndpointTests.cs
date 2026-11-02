@@ -14,18 +14,20 @@ public sealed class IncidentEndpointTests(SecureLabApiFactory factory)
     [Fact]
     public async Task GetList_ReturnsSeededIncidents()
     {
-        var incidents = await _client.GetFromJsonAsync<List<IncidentListItemResponse>>(
+        var client = await factory.AliceClientAsync();
+        var incidents = await client.GetFromJsonAsync<List<IncidentListItemResponse>>(
             "/api/incidents");
 
         Assert.NotNull(incidents);
         Assert.Contains(incidents, incident => incident.Id == DbSeeder.AliceIncidentId);
-        Assert.Contains(incidents, incident => incident.Id == DbSeeder.BobIncidentId);
+        Assert.DoesNotContain(incidents, incident => incident.Id == DbSeeder.BobIncidentId);
     }
 
     [Fact]
     public async Task GetDetails_ForUnknownId_ReturnsProblemDetails404()
     {
-        using var response = await _client.GetAsync($"/api/incidents/{Guid.NewGuid()}");
+        var client = await factory.AliceClientAsync();
+        using var response = await client.GetAsync($"/api/incidents/{Guid.NewGuid()}");
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         Assert.Equal("application/problem+json", response.Content.Headers.ContentType?.MediaType);
@@ -34,7 +36,8 @@ public sealed class IncidentEndpointTests(SecureLabApiFactory factory)
     [Fact]
     public async Task GetDetails_DoesNotExposeInternalOwnerFields()
     {
-        using var response = await _client.GetAsync(
+        var client = await factory.AliceClientAsync();
+        using var response = await client.GetAsync(
             $"/api/incidents/{DbSeeder.AliceIncidentId}");
         var json = await response.Content.ReadAsStringAsync();
         using var document = JsonDocument.Parse(json);
@@ -48,7 +51,8 @@ public sealed class IncidentEndpointTests(SecureLabApiFactory factory)
     [Fact]
     public async Task GetSeveritySummary_ReturnsAllLevelsInCriticalityOrder()
     {
-        var summary = await _client.GetFromJsonAsync<List<IncidentSeveritySummaryResponse>>(
+        var client = await factory.AliceClientAsync();
+        var summary = await client.GetFromJsonAsync<List<IncidentSeveritySummaryResponse>>(
             "/api/incidents/severity-summary");
 
         Assert.NotNull(summary);

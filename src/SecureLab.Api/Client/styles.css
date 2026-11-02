@@ -138,3 +138,5 @@ select {
     grid-template-columns: 1fr;
   }
 }
+#details-form { display: grid; gap: 0.6rem; margin-bottom: 1rem; }
+#details-id { width: 100%; box-sizing: border-box; padding: 0.6rem; font-family: monospace; }

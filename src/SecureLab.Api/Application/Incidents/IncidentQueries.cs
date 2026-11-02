@@ -7,7 +7,8 @@ namespace SecureLab.Api.Application.Incidents;
 
 public sealed class IncidentQueries(
     SecureLabDbContext dbContext,
-    ILogger<IncidentQueries> logger)
+    ILogger<IncidentQueries> logger,
+    IncidentAccess access)
 {
     private static readonly IReadOnlyList<string> SeverityOrder =
         Enum.GetValues<IncidentSeverity>().Select(severity => severity.ToString()).ToList();
@@ -18,7 +19,7 @@ public sealed class IncidentQueries(
     {
         logger.LogInformation("Loading incidents with status filter {Status}", status);
 
-        var query = dbContext.Incidents.AsNoTracking();
+        var query = access.Visible(dbContext.Incidents.AsNoTracking());
         if (status is not null)
         {
             query = query.Where(incident => incident.Status == status);
@@ -70,8 +71,7 @@ public sealed class IncidentQueries(
     {
         logger.LogInformation("Loading incident {IncidentId}", id);
 
-        return dbContext.Incidents
-            .AsNoTracking()
+        return access.Visible(dbContext.Incidents.AsNoTracking())
             .Where(incident => incident.Id == id)
             .Select(incident => new IncidentDetailsResponse(
                 incident.Id,
@@ -83,7 +83,7 @@ public sealed class IncidentQueries(
                 incident.CreatedAtUtc,
                 incident.Owner.DisplayName,
                 incident.Comments
-                    .Where(comment => !comment.IsInternal)
+                    .Where(comment => !comment.IsInternal || access.IsAnalyst)
                     .OrderBy(comment => comment.CreatedAtUtc)
                     .Select(comment => new IncidentCommentResponse(
                         comment.Id,

@@ -116,6 +116,14 @@ public static class DbSeeder
                 IsInternal = false,
                 CreatedAtUtc = new DateTimeOffset(2026, 8, 2, 14, 40, 0, TimeSpan.Zero)
             });
+        dbContext.IncidentComments.Add(new IncidentComment
+        {
+            Id = Guid.Parse("30000000-0000-0000-0000-000000000003"),
+            Incident = aliceIncident, Author = morgan,
+            Text = "Internal training note: analyst-only investigation.",
+            IsInternal = true,
+            CreatedAtUtc = new DateTimeOffset(2026, 8, 1, 9, 45, 0, TimeSpan.Zero)
+        });
         dbContext.IncidentStatusHistory.Add(
             new IncidentStatusHistory
             {

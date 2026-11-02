@@ -1,0 +1,60 @@
+{
+  "foreignComment": {
+    "status": 404,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Інцидент не знайдено",
+      "status": 404,
+      "traceId": "00-6de653f54435b8ec9acf8f8303da9a68-67f13b7e69994a06-00"
+    }
+  },
+  "reporterInternal": {
+    "status": 404,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Інцидент не знайдено",
+      "status": 404,
+      "traceId": "00-548315f19866e16fc8855e1e1bd98843-326329c3821d360b-00"
+    }
+  },
+  "analystInternal": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "30000000-0000-0000-0000-000000000003",
+      "authorDisplayName": "Морган Литвин",
+      "text": "Internal training note: analyst-only investigation.",
+      "createdAtUtc": "2026-08-01T09:45:00+00:00"
+    }
+  },
+  "analystDetails": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000001",
+      "title": "Підозрілий лист із вкладенням",
+      "description": "Одержано лист нібито від деканату. Вкладення не відкривалося.",
+      "severity": "Medium",
+      "status": "Triaged",
+      "occurredAtUtc": "2026-08-01T08:30:00+00:00",
+      "createdAtUtc": "2026-08-01T09:00:00+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000001",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Заголовки листа передано аналітику.",
+          "createdAtUtc": "2026-08-01T09:30:00+00:00"
+        },
+        {
+          "id": "30000000-0000-0000-0000-000000000003",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Internal training note: analyst-only investigation.",
+          "createdAtUtc": "2026-08-01T09:45:00+00:00"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "foreign": {
+    "status": 404,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Інцидент не знайдено",
+      "status": 404,
+      "traceId": "00-15a2bf0e27d198c3ccc4682a8e57471a-f5f359e1b645447e-00"
+    }
+  },
+  "unknown": {
+    "status": 404,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Інцидент не знайдено",
+      "status": 404,
+      "traceId": "00-cbeb7ecba60ed0236f2138daa074c9ee-7532547453f7b70f-00"
+    }
+  }
+}

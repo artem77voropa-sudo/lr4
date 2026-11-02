@@ -1,0 +1,37 @@
+{
+  "response": {
+    "status": 204,
+    "mediaType": "text/plain",
+    "body": null
+  },
+  "before": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "21c43f47-98fd-4992-8121-6fbf8f84fb07",
+      "title": "LR04-evidence-2765c40beee847ffb32f3df44ceeaf34",
+      "description": "Synthetic evidence incident.",
+      "severity": "Low",
+      "status": "New",
+      "occurredAtUtc": "2026-09-01T10:00:00+00:00",
+      "createdAtUtc": "2026-11-02T16:15:21.131587+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": []
+    }
+  },
+  "after": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "21c43f47-98fd-4992-8121-6fbf8f84fb07",
+      "title": "LR04-evidence-2765c40beee847ffb32f3df44ceeaf34",
+      "description": "Updated permitted content.",
+      "severity": "Low",
+      "status": "New",
+      "occurredAtUtc": "2026-09-01T10:00:00+00:00",
+      "createdAtUtc": "2026-11-02T16:15:21.131587+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": []
+    }
+  }
+}

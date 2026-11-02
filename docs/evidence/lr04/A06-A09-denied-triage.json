@@ -1,0 +1,43 @@
+{
+  "before": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "4a0f0928-52de-45cc-838b-2770d6d1dc67",
+      "title": "LR04-evidence-5a6174d93e494689b8456953b1d1632c",
+      "description": "Synthetic evidence incident.",
+      "severity": "Low",
+      "status": "New",
+      "occurredAtUtc": "2026-09-01T10:00:00+00:00",
+      "createdAtUtc": "2026-11-02T16:15:20.941779+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": []
+    }
+  },
+  "response": {
+    "status": 403,
+    "mediaType": "application/problem+json",
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.4",
+      "title": "Дію не дозволено",
+      "status": 403,
+      "traceId": "00-febd0820841a25fd8c0a4063166dc9ed-b4e4a02024a037c0-00"
+    }
+  },
+  "after": {
+    "status": 200,
+    "mediaType": "application/json",
+    "body": {
+      "id": "4a0f0928-52de-45cc-838b-2770d6d1dc67",
+      "title": "LR04-evidence-5a6174d93e494689b8456953b1d1632c",
+      "description": "Synthetic evidence incident.",
+      "severity": "Low",
+      "status": "New",
+      "occurredAtUtc": "2026-09-01T10:00:00+00:00",
+      "createdAtUtc": "2026-11-02T16:15:20.941779+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": []
+    }
+  },
+  "unchanged": true
+}

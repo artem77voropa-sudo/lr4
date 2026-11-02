@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "mediaType": "application/json",
+  "body": {
+    "id": "10000000-0000-0000-0000-000000000003",
+    "userName": "morgan",
+    "role": "Analyst"
+  }
+}
