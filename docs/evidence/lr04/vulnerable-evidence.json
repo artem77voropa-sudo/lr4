@@ -1,0 +1,124 @@
+{
+  "alice_profile": {
+    "status": 200,
+    "body": {
+      "id": "10000000-0000-0000-0000-000000000001",
+      "userName": "alice",
+      "role": "Reporter"
+    }
+  },
+  "bob_profile": {
+    "status": 200,
+    "body": {
+      "id": "10000000-0000-0000-0000-000000000002",
+      "userName": "bob",
+      "role": "Reporter"
+    }
+  },
+  "own_read": {
+    "status": 200,
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000001",
+      "title": "Підозрілий лист із вкладенням",
+      "description": "Одержано лист нібито від деканату. Вкладення не відкривалося.",
+      "severity": "Medium",
+      "status": "Triaged",
+      "occurredAtUtc": "2026-08-01T08:30:00+00:00",
+      "createdAtUtc": "2026-08-01T09:00:00+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000001",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Заголовки листа передано аналітику.",
+          "createdAtUtc": "2026-08-01T09:30:00+00:00"
+        }
+      ]
+    }
+  },
+  "foreign_read": {
+    "status": 200,
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000002",
+      "title": "Невідома спроба входу",
+      "description": "Система зафіксувала вхід до облікового запису з нового пристрою.",
+      "severity": "High",
+      "status": "InProgress",
+      "occurredAtUtc": "2026-08-02T14:10:00+00:00",
+      "createdAtUtc": "2026-08-02T14:20:00+00:00",
+      "ownerDisplayName": "Боб Мельник",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000002",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Розпочато перевірку журналу автентифікації.",
+          "createdAtUtc": "2026-08-02T14:40:00+00:00"
+        }
+      ]
+    }
+  },
+  "before": {
+    "status": 200,
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000002",
+      "title": "Невідома спроба входу",
+      "description": "Система зафіксувала вхід до облікового запису з нового пристрою.",
+      "severity": "High",
+      "status": "InProgress",
+      "occurredAtUtc": "2026-08-02T14:10:00+00:00",
+      "createdAtUtc": "2026-08-02T14:20:00+00:00",
+      "ownerDisplayName": "Боб Мельник",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000002",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Розпочато перевірку журналу автентифікації.",
+          "createdAtUtc": "2026-08-02T14:40:00+00:00"
+        }
+      ]
+    }
+  },
+  "foreign_update": {
+    "status": 204,
+    "body": null
+  },
+  "after": {
+    "status": 200,
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000002",
+      "title": "Невідома спроба входу",
+      "description": "LOCAL LR04 PoC: unauthorized synthetic modification.",
+      "severity": "High",
+      "status": "InProgress",
+      "occurredAtUtc": "2026-08-02T14:10:00+00:00",
+      "createdAtUtc": "2026-08-02T14:20:00+00:00",
+      "ownerDisplayName": "Боб Мельник",
+      "comments": [
+        {
+          "id": "30000000-0000-0000-0000-000000000002",
+          "authorDisplayName": "Морган Литвин",
+          "text": "Розпочато перевірку журналу автентифікації.",
+          "createdAtUtc": "2026-08-02T14:40:00+00:00"
+        }
+      ]
+    }
+  },
+  "reporter_triage": {
+    "status": 204,
+    "body": null
+  },
+  "triage_after": {
+    "status": 200,
+    "body": {
+      "id": "20000000-0000-0000-0000-000000000003",
+      "title": "Перевірка журналу комп'ютерного класу",
+      "description": "Текст <script> має відображатися як текст, а не виконуватися як HTML.",
+      "severity": "Low",
+      "status": "Triaged",
+      "occurredAtUtc": "2026-08-03T07:45:00+00:00",
+      "createdAtUtc": "2026-08-03T08:00:00+00:00",
+      "ownerDisplayName": "Аліса Коваль",
+      "comments": []
+    }
+  }
+}
